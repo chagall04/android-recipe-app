@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for Dark Mode -->
+    <style name="Base.Theme.RecipeBookApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Dark Theme Colors -->
+        <item name="colorPrimary">@color/blue_200</item>
+        <item name="colorPrimaryDark">@color/blue_100</item>
+        <item name="colorSecondary">@color/amber_200</item>
+
+        <!-- Use a dark background and white primary text for good contrast -->
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for Light Mode -->
+    <style name="Base.Theme.RecipeBookApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_700</item>
+        <item name="colorSecondary">@color/amber_500</item>
+
+        <!-- Directly use colors for background and text -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/blue_700</item>
+    </style>
+
+    <style name="Theme.RecipeBookApp" parent="Base.Theme.RecipeBookApp" />
+</resources>

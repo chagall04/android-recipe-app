@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Root layout for main activity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Toolbar at the top -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white" />
+
+        <!-- Featured Recipe Section -->
+        <LinearLayout
+            android:id="@+id/featuredRecipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Search Box inside TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search recipes..."
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RadioGroup for Meal Type Filters -->
+        <RadioGroup
+            android:id="@+id/mealTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/breakfastBtn"
+                android:text="Breakfast"
+                style="@style/FilterRadioButton"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/lunchBtn"
+                android:text="Lunch"
+                style="@style/FilterRadioButton"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dinnerBtn"
+                android:text="Dinner"
+                style="@style/FilterRadioButton"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dessertBtn"
+                android:text="Dessert"
+                style="@style/FilterRadioButton"
+                android:layout_weight="1" />
+
+            <!-- New Favorites RadioButton -->
+            <RadioButton
+                android:id="@+id/favoritesBtn"
+                android:text="Favorites"
+                style="@style/FilterRadioButton"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <!-- Clear Filters Button -->
+        <Button
+            android:id="@+id/clearFiltersBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/clear_filters" />
+
+        <!-- Container for recipe cards -->
+        <LinearLayout
+            android:id="@+id/recipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </LinearLayout>
+</ScrollView>

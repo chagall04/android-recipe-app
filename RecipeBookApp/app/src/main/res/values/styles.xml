@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+         AppTheme: Our main theme based on MaterialComponents DayNight NoActionBar.
+         Provides our primary colors and enables window transitions.
+    -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Enable window transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/slide_right</item>
+        <item name="android:windowExitTransition">@transition/slide_left</item>
+    </style>
+
+    <!--
+         AppTheme.NoActionBar: A variant that removes the default action bar.
+         Use this for activities where you want to set your own Toolbar.
+    -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Style for custom Filter RadioButtons -->
+    <style name="FilterRadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:buttonTint">@color/colorPrimary</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <!--
+         SplashTheme: A theme for the splash screen that removes the action bar and
+         sets the window background to our splash drawable.
+    -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

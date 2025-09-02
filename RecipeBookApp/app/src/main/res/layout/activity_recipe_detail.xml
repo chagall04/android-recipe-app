@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Recipe Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Ingredients Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="4dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Ingredients -->
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="16dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Video Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="4dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- YouTube Player -->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtubePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Website Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="4dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- WebView for recipe website -->
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Buttons in a horizontal layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/callBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call Store"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/mapBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Find Stores" />
+        </LinearLayout>
+
+        <!-- Prep Time -->
+        <TextView
+            android:id="@+id/prepTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Equipment -->
+        <TextView
+            android:id="@+id/equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Instructions -->
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Share Recipe Button -->
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share Recipe"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Spinner for Allergen Modes -->
+        <Spinner
+            android:id="@+id/allergenSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/allergen_modes" />
+
+        <!-- Ingredient Substitution Button -->
+        <Button
+            android:id="@+id/btnSubstitute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredient Substitutions"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Recipe Rating System -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="0"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Favorite Toggle Button -->
+        <ToggleButton
+            android:id="@+id/toggleFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="Favorite"
+            android:textOff="Mark as Favorite"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
